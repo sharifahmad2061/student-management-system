@@ -11,13 +11,14 @@ class CustomUserManager(BaseUserManager):
     custom user manager
     """
 
-    def create_user(self, email, password=None):
+    def create_user(self, email, password=None, is_student=True):
         if not email:
             raise ValueError('users must have an email')
         user = self.model(
             email=self.normalize_email(email),
         )
         user.set_password(password)
+        user.is_student = is_student
         user.save(using=self._db)
         return user
 
