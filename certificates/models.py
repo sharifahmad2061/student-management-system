@@ -5,5 +5,5 @@ from utils.models import Timestamps
 
 
 class Certificate(Timestamps, models.Model):
-    name = models.TextField(max_length=256)
+    name = models.CharField(max_length=256)
     description = models.TextField()
