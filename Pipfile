@@ -11,6 +11,7 @@ pylint = "*"
 pylint-django = "*"
 autopep8 = "*"
 djangorestframework = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.7"
